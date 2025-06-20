@@ -7,7 +7,7 @@ Instala e atualiza o Cursor IDE no GNOME com um comando.
 **Uma linha:**
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/main/install | bash
+curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/master/install | bash
 ```
 
 **Usar:**

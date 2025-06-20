@@ -14,10 +14,10 @@ cd "$TEMP_DIR"
 
 # Baixar arquivos necessários
 echo "📥 Baixando arquivos..."
-curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/main/install-cursor.sh > install-cursor.sh
-curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/main/update-cursor.sh > update-cursor.sh
-curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/main/Cursor.template.desktop > Cursor.template.desktop
-curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/main/cursor-icon.jpg > cursor-icon.jpg
+curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/master/install-cursor.sh > install-cursor.sh
+curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/master/update-cursor.sh > update-cursor.sh
+curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/master/Cursor.template.desktop > Cursor.template.desktop
+curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/master/cursor-icon.jpg > cursor-icon.jpg
 
 # Dar permissões
 chmod +x install-cursor.sh update-cursor.sh
