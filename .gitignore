@@ -1,0 +1,10 @@
+# Executável gerado
+cursor-gnome-installer
+
+# Arquivos temporários
+*.tmp
+*.log
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db 

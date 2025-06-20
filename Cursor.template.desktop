@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Cursor IDE
+Exec=/opt/Cursor.AppImage
+Type=Application
+Categories=Utility;
+Icon={{HOME_DIR}}/.local/share/icons/cursor-icon.jpg
+StartupWMClass=CursorIDE
+Terminal=false

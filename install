@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Cursor GNOME Installer
+
+set -e
+
+echo "🚀 Instalando Cursor GNOME Update..."
+
+# Criar diretório temporário
+TEMP_DIR="/tmp/cursor-gnome-update-install"
+rm -rf "$TEMP_DIR"
+mkdir -p "$TEMP_DIR"
+cd "$TEMP_DIR"
+
+# Baixar arquivos necessários
+echo "📥 Baixando arquivos..."
+curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/main/install-cursor.sh > install-cursor.sh
+curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/main/update-cursor.sh > update-cursor.sh
+curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/main/Cursor.template.desktop > Cursor.template.desktop
+curl -fsSL https://raw.githubusercontent.com/Muriel-Gasparini/cursor-gnome-update/main/cursor-icon.jpg > cursor-icon.jpg
+
+# Dar permissões
+chmod +x install-cursor.sh update-cursor.sh
+
+# Criar comando global
+echo "⚙️ Configurando comando global..."
+sudo tee /usr/local/bin/update-cursor > /dev/null << EOF
+#!/bin/bash
+cd "$TEMP_DIR"
+./install-cursor.sh "\$@"
+EOF
+
+sudo chmod +x /usr/local/bin/update-cursor
+
+echo "✅ Instalação concluída!"
+echo ""
+echo "🎯 Use: update-cursor"
+echo "🗑️ Desinstalar: sudo rm /usr/local/bin/update-cursor && rm -rf $TEMP_DIR"
+
+# Executar primeira instalação
+echo ""
+echo "🔄 Executando primeira instalação..."
+update-cursor 
